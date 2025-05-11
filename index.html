@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HBO-Clone: Home to Groundbreaking Series, Movies, Comedies & Documentaries</title>
-    <link rel="stylesheet" href="/css/style1.css">
     <link rel="icon" href="/images/icon2.png">
-    <link rel="stylesheet" media="screen and (max-width: 1450px)" href="/css/phone.css">
-    <link
+    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/style3.css">
+    <link rel="stylesheet" href="/css/style4.css">
+    <link rel="stylesheet" href="/css/style5.css">
+    <link rel="stylesheet" href="/css/style6.css">
+
+    <link 
         href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Besley:ital,wght@0,400..900;1,400..900&family=Bree+Serif&family=Dosis:wght@200..800&family=Gruppo&family=Jersey+15&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sixtyfour+Convergence&family=Smooch+Sans:wght@100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 
 <body>
@@ -18,6 +27,12 @@
         <div id="logo">
             <img id="imglogo1" src="/images/logo1.png" alt="HBO-Clone.com">
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span class="hamburger-icon">☰</span>
+            <span class="close-icon">&times;</span>
+        </div>
+        
+
         <ul>
             <li class="item"><a href="#">SERIES</a></li>
             <li class="item"><a href="#">MOVIES</a></li>
@@ -25,7 +40,7 @@
             <li class="item"><a href="#">SCHEDULE</a></li>
             <li class="item"><a href="#">FREE EPISODES</a></li>
             <li class="dropdown">
-                <a href="#" class="dropbtn">MORE</a>
+                <a href="#" class="dropbtn" onclick="toggleDropdown(event)">MORE ▾</a>
                 <div class="dropdown-content">
                     <a href="#">DOCUMENTARIES</a>
                     <a href="#">SPECIALS</a>
@@ -55,106 +70,153 @@
         </div>
         <div class="firstbutton-container">
             <div class="film-buttons">
-                <button class="btn1">watch the trailer</button>
-                <button class="btn1">find out more</button>
+                <button class="btn1" onclick="window.open('https://youtu.be/P5iIPfNzj2o?si=ZeZDP7G1PJcX26iS&t=07', '_blank')"><i class="fa-solid fa-play"></i> watch the trailer</button>
+                <button class="btn1" onclick="document.getElementById('morefilms').scrollIntoView({ behavior: 'smooth' });">find out more</button>
             </div>
         </div>
     </section>
 
     <section id="services-container">
         <h1 class="primary-h center">Stream the Latest</h1>
-        <div id="latest">
-            <div class="box">
-                <img src="/images/movies-img/avengers1img1.jpg" alt="The Avengers">
-                <div class="availableornot">Available Now</div>
-                <h2 class="h-secondary">The Avengers</h2>
-                <p>When Thor's evil brother, Loki (Tom Hiddleston), gains access to the unlimited power of the energy
-                    cube called the Tesseract, Nick Fury (Samuel L. Jackson), director of S.H.I.E.L.D., initiates a
-                    superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury's "dream
-                    team" are Iron Man (Robert Downey Jr.), Captain America (Chris Evans), the Hulk (Mark Ruffalo), Thor
-                    (Chris Hemsworth), the Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner).</p>
+        <div class="scroll-wrapper">
+            <button class="scroll-btn left" onclick="scrollLeft()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div id="latest">
+                <div class="box">
+                    <img src="/images/movies-img/avengers1img1.jpg" alt="The Avengers">
+                    <div class="availableornot">Available Now</div>
+                    <h2 class="h-secondary">The Avengers</h2>
+                    <p>When Thor's evil brother, Loki (Tom Hiddleston), gains access to the unlimited power of the
+                        energy
+                        cube called the Tesseract, Nick Fury (Samuel L. Jackson), director of S.H.I.E.L.D., initiates a
+                        superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury's "dream
+                        team" are Iron Man (Robert Downey Jr.), Captain America (Chris Evans), the Hulk (Mark Ruffalo),
+                        Thor
+                        (Chris Hemsworth), the Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner).</p>
+                </div>
+                <div class="box">
+                    <img src="/images/movies-img/ageofultronimg2.webp" alt="Avengers: Age of Ultron">
+                    <div class="availableornot">Available Now</div>
+                    <h2 class="h-secondary">Avengers: Age of Ultron</h2>
+                    <p>When Tony Stark (Robert Downey Jr.) jump-starts a dormant peacekeeping program, things go
+                        terribly
+                        awry, forcing him, Thor (Chris Hemsworth), the Incredible Hulk (Mark Ruffalo) and the rest of
+                        the
+                        Avengers to reassemble. As the fate of Earth hangs in the balance, the team is put to the
+                        ultimate
+                        test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way,
+                        they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff.</p>
+                </div>
+                <div class="box">
+                    <img src="/images/movies-img/captain-america-civil-war-img1.webp" alt="Captain America: Civil War">
+                    <div class="availableornot">Available Now</div>
+                    <h2 class="h-secondary">Captain America: Civil War</h2>
+                    <p>Political pressure mounts to install a system of accountability when the actions of the Avengers
+                        lead
+                        to collateral damage. The new status quo deeply divides members of the team. Captain America
+                        (Chris
+                        Evans) believes superheroes should remain free to defend humanity without government
+                        interference.
+                        Iron Man (Robert Downey Jr.) sharply disagrees and supports oversight. As the debate escalates
+                        into
+                        an all-out feud, Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner) must pick a side.
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="/images/movies-img/Avengers Endgame_img4.jpg" alt="Avengers: Endgame">
+                    <div class="availableornot">Available Now</div>
+                    <h2 class="h-secondary">Avengers: Endgame</h2>
+                    <p>The fourth installment in the Avengers saga is the culmination of 22 interconnected Marvel films
+                        and
+                        the climax of a journey. The world's heroes finally understand just how fragile reality is, and
+                        the
+                        sacrifices that must be made to uphold it, in a story of friendship, teamwork and setting aside
+                        differences to overcome an impossible obstacle.</p>
+                </div>
             </div>
-            <div class="box">
-                <img src="/images/movies-img/ageofultronimg2.webp" alt="Avengers: Age of Ultron">
-                <div class="availableornot">Available Now</div>
-                <h2 class="h-secondary">Avengers: Age of Ultron</h2>
-                <p>When Tony Stark (Robert Downey Jr.) jump-starts a dormant peacekeeping program, things go terribly
-                    awry, forcing him, Thor (Chris Hemsworth), the Incredible Hulk (Mark Ruffalo) and the rest of the
-                    Avengers to reassemble. As the fate of Earth hangs in the balance, the team is put to the ultimate
-                    test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way,
-                    they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff.</p>
-            </div>
-            <div class="box">
-                <img src="/images/movies-img/captain-america-civil-war-img1.webp" alt="Captain America: Civil War">
-                <div class="availableornot">Available Now</div>
-                <h2 class="h-secondary">Captain America: Civil War</h2>
-                <p>Political pressure mounts to install a system of accountability when the actions of the Avengers lead
-                    to collateral damage. The new status quo deeply divides members of the team. Captain America (Chris
-                    Evans) believes superheroes should remain free to defend humanity without government interference.
-                    Iron Man (Robert Downey Jr.) sharply disagrees and supports oversight. As the debate escalates into
-                    an all-out feud, Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner) must pick a side.</p>
-            </div>
-            <div class="box">
-                <img src="/images/movies-img/Avengers Endgame_img4.jpg" alt="Avengers: Endgame">
-                <div class="availableornot">Available Now</div>
-                <h2 class="h-secondary">Avengers: Endgame</h2>
-                <p>The fourth installment in the Avengers saga is the culmination of 22 interconnected Marvel films and
-                    the climax of a journey. The world's heroes finally understand just how fragile reality is, and the
-                    sacrifices that must be made to uphold it, in a story of friendship, teamwork and setting aside
-                    differences to overcome an impossible obstacle.</p>
-            </div>
+            <button class="scroll-btn right" onclick="scrollRight()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
     </section>
 
 
     <section id="SCHEDULE">
-        <div id="Tonigt">
-            <h3>Tonight on HBO</h3><a href="#">SEE FULL SCHEDULE</a>
+        <div id="Tonight">
+            <h3>Tonight on HBO</h3>
+            <a href="#">SEE FULL SCHEDULE &gt;
+            </a>
         </div>
-        <!-- <div id="horizontal-line"></div> -->
+    
+        <hr id="horizontal-line" />
+    
+        <ul class="alltime">
+            <li class="timeline">
+                <h6 class="head6">THE FLORIDA PROJECT</h6>
+                <p><time datetime="20:00">8:00 PM EST</time></p>
+            </li>
+            <li class="timeline">
+                <h6 class="head6">TANGERINE</h6>
+                <p><time datetime="21:55">9:55 PM EST</time></p>
+            </li>
+            <li class="timeline">
+                <h6 class="head6">TEEN WOLF</h6>
+                <p><time datetime="23:25">11:25 PM EST</time></p>
+            </li>
+        </ul>
+    </section>    
 
-        <div class="timeline">
-            <h6 class="head6">THE FLORIDA PROJECT</h6>
-            <p>8:00 PM EST</p>
-        </div>
-        <div class="timeline">
-            <h6 class="head6">TANGERINE</h6>
-            <p>9:55 PM EST</p>
-            <!-- TANGERINE 9:55 PM EST -->
-        </div>
-        <div class="timeline">
-            <h6 class="head6">TEEN WOLF</h6>
-            <p>11:25 PM EST</p>
-            <!-- TEEN WOLF 11:25 PM EST -->
-        </div>
-    </section>
 
 
     <section id="morefilms">
         <div class="box">
-            <img src="images/movies-img/iron_man_ver3.jpg" alt="iron_man_1_imges">
-        </div>
-        <div class="box">
-            <img src="images/movies-img/iron_man_two_ver2.jpg" alt="iron_man_two_imges">
-        </div>
-        <div class="box">
-            <img src="images/movies-img/iron-man-3-img1.jpg" alt="iron_man_three_imges">
-        </div>
-        <div class="box">
-            <img src="images/movies-img/thor_img1.jpg" alt="Thor_1_imgs">
-        </div>
-        <div class="box">
-            <img src="images/movies-img/thor-2-ing1.jpg" alt="Thor_2_imgs">
-        </div>
-        <div class="box">
-            <img src="images/movies-img/incredible_hulk.jpg" alt="Incredible-Hulk">
-        </div>
-        <div class="box">
-            <img src="images/movies-img/spider-man1-img1.jpg" alt="spider-man-movies">
-        </div>
-        <div class="box">
-            <img src="images/movies-img/shan-chi-img1.jpg" alt="ten-rings-movies">
-        </div>
+            <a href="https://youtu.be/8ugaeA-nMTc?si=qLi1Zq4GjhNWBynh&t=3" target="_blank">
+              <img src="images/movies-img/iron_man_ver3.jpg" alt="iron_man_1_imges">
+            </a>
+          </div>
+          
+          <div class="box">
+            <a href="https://youtu.be/BoohRoVA9WQ?si=DGWCmNrAe7eNwl_-&t=7" target="_blank">
+              <img src="images/movies-img/iron_man_two_ver2.jpg" alt="iron_man_two_imges">
+            </a>
+          </div>
+          
+          <div class="box">
+            <a href="https://youtu.be/Ke1Y3P9D0Bc?si=mpw_71T8aOTZqotr&t=3" target="_blank">
+              <img src="images/movies-img/iron-man-3-img1.jpg" alt="iron_man_three_imges">
+            </a>
+          </div>
+          
+          <div class="box">
+            <a href="https://youtu.be/JOddp-nlNvQ?si=fzPspUHcy9csVYRs&t=7" target="_blank">
+              <img src="images/movies-img/thor_img1.jpg" alt="Thor_1_imgs">
+            </a>
+          </div>
+          
+          <div class="box">
+            <a href="https://youtu.be/npvJ9FTgZbM?si=nX1B1kBvFjkZ6aMA&t=5" target="_blank">
+              <img src="images/movies-img/thor-2-ing1.jpg" alt="Thor_2_imgs">
+            </a>
+          </div>
+          
+          <div class="box">
+            <a href="https://youtu.be/xbqNb2PFKKA?si=euJiec9nfeLVR-YY&t=7" target="_blank">
+              <img src="images/movies-img/incredible_hulk.jpg" alt="Incredible-Hulk">
+            </a>
+          </div>
+          
+          <div class="box">
+            <a href="https://youtu.be/rk-dF1lIbIg?si=6f2ZDwKfUdCoBzoE" target="_blank">
+              <img src="images/movies-img/spider-man1-img1.jpg" alt="spider-man-movies">
+            </a>
+          </div>
+          
+          <div class="box">
+            <a href="https://youtu.be/8YjFbMbfXaQ?si=dE49XSZl6JsrqBlb" target="_blank">
+              <img src="images/movies-img/shan-chi-img1.jpg" alt="ten-rings-movies">
+            </a>
+          </div>
         <div class="box1">
             <img src="images/max2.PNG" alt="">
             <p>It's All Here</p>
@@ -232,5 +294,37 @@
         </div>
     </footer>
 </body>
+<script>
+  function scrollLeft() {
+    console.log("Scroll Left clicked");
+    document.getElementById('latest').scrollBy({
+        left: -300,
+        behavior: 'smooth'
+    });
+}
+
+function scrollRight() {
+    console.log("Scroll Right clicked");
+    document.getElementById('latest').scrollBy({
+        left: 300,
+        behavior: 'smooth'
+    });
+}
+
+
+
+    function toggleMenu() {
+        document.getElementById("navbar").classList.toggle("show-menu");
+    }
+
+    function toggleDropdown(event) {
+        event.preventDefault(); // prevent the link from jumping
+        const dropdown = event.target.closest(".dropdown");
+        dropdown.classList.toggle("open");
+    }
+
+
+</script>
+
 
 </html>

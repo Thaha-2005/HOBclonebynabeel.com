@@ -1,0 +1,178 @@
+@media (max-width: 425px) and (min-width: 375px) {
+    /* Your CSS styles go here */
+
+  body::-webkit-scrollbar{
+    display: none;
+}
+.menu-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 999; /* Ensure it's above other content */
+    cursor: pointer;
+}
+
+.menu-toggle .hamburger-icon {
+    display: inline;
+}
+
+#navbar.show-menu .menu-toggle .hamburger-icon {
+    display: none;
+}
+
+#navbar.show-menu .menu-toggle .close-icon {
+    display: inline;
+}
+
+#navbar ul {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    align-items: center;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    background-color: #ffffff;
+    z-index: 998;
+    transition: max-height 0.4s ease;
+}
+
+
+#navbar.show-menu ul {
+    max-height: 500px;
+}
+
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 999;
+}
+
+#navbar ul li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content {
+    position: static;
+    box-shadow: none;
+}
+
+.btn {
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn button {
+    width: 100%;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    padding-left: 10px;
+    transition: max-height 0.3s ease;
+}
+
+.dropdown.open .dropdown-content {
+    display: flex;
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+#navbar #imglogo1 {
+    padding: 0;
+    width: 75px;
+     
+}
+
+.menu-toggle .hamburger-icon,
+.menu-toggle .close-icon {
+    font-size: 24px;
+}
+
+
+
+/* home */
+
+#home {
+    padding: 70px 10px;
+}
+#home .availableornot {
+    font-size: .8rem;
+    color: #edff00;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+#home h1 {
+    font-size: 2.2rem;
+    color: rgb(255, 192, 239);
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+#home p {
+    text-shadow: -1px -1px 0 #ff8a8a, 1px -1px 0 red, -1px 1px 0 #ff8a8a, 1px 1px 0 #ff8a8a;
+}
+.film-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+    
+}
+.btn1 {
+    margin: 5px 10px;
+}
+
+/* latest section  */
+.scroll-btn {
+    display: none;
+}
+#latest {
+    margin: 0px 50px;
+}
+/* SCHEDULE section  */
+.alltime {
+        flex-wrap: wrap;
+}
+.timeline {
+    margin: 0% 30%;
+}
+/* More files section  */
+#morefilms {
+    margin: 100px 0px;
+    margin-bottom: 25px;
+    padding: 20px 50px;
+}
+#comes {
+    flex-direction: column;
+    padding: 0px 0px;
+}
+#comes .box2 img {
+    max-width: 400px;
+}
+
+
+#paras-btns p {
+    margin: 50px 0px;
+    
+}
+
+
+
+#footer-list ul {
+    margin: 0px 0px;
+}
+}

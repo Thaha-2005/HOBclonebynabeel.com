@@ -1,0 +1,117 @@
+@media (max-width: 1024px) and (min-width: 768px) {
+    /* Your CSS styles go here */
+  
+  * {
+    margin: 0;
+    padding: 0;
+}
+#navbar ul li {
+    padding: 0px 5px;
+}
+
+.btn {
+    margin-left: 135px;
+}
+
+.btn #navsignup {
+    margin: 0px 5px;
+    padding: 1px 1px;
+}
+
+
+.btn #navsignup:hover {
+    background-color: rgb(0, 0, 131);
+
+}
+
+.btn #navsignin {
+    padding: 1px 1px;
+}
+
+/* home contant  */
+#home{
+    margin-bottom: 5%;
+}
+
+.btn1 {
+    font-weight: 100;
+    padding: 10px;
+    margin: 0px 5px;
+}
+
+
+#home .availableornot {
+    font-weight: 100;
+    font-size: .8rem;
+
+}
+
+#home .filmname {
+    font-size: 1rem;
+
+}
+
+#home p {
+    font-size: 1rem;
+}
+
+/* latest section  */
+#services-container {
+    margin-top: -170px;
+}
+
+#latest {
+    margin: 0px 100px;
+}
+
+#latest .box {
+    margin: 0px 1px;
+    margin-bottom: 5px;
+}
+
+
+/* SCHEDULE section  */
+ 
+
+
+/* More files section  */
+#morefilms {
+    padding: 10px 25px;
+}
+
+/* coming soon section  */
+#Coming-soon {
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+
+#comes {
+
+    margin-top: 10px;
+    padding: 0px 15px;
+    align-items: center;
+}
+
+#comes .box2 img {
+    padding: 0px;
+    cursor: pointer;
+    max-width: 390px;
+}
+
+#comes h2 {
+    font-size: 2rem;
+}
+
+/* last banner section  */
+#last-banner img {
+    max-width: 100px;
+    margin: 0px;
+    padding: 20px;
+    
+}
+
+#paras-btns p {
+    font-size: 1.2rem;
+    margin: 80px;
+}
+}

@@ -1,0 +1,54 @@
+@media (max-width: 768px) and (min-width: 425px) {
+    /* Your CSS styles go here */
+
+  * {
+    margin: 0;
+    padding: 0;
+}
+#navbar #imglogo1 {
+    padding-left: 45px;
+}
+#navbar #img-max2 {
+    width: 30px;
+}
+.btn {
+    margin-left: 0px;
+}
+#home {
+    padding: 130px 50px;
+    padding-bottom: 0px;
+}
+
+#latest {
+    margin: 0px 140px;
+}
+.alltime {
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+.timeline {
+    margin: 0% 40%;
+    padding: 15px 0px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-left: none;
+    border-top: 3px solid #00bfff;
+}
+
+#morefilms::-webkit-scrollbar{
+    display: none;
+}
+#comes {
+    flex-direction: column;
+    text-align: center;
+}
+
+    #last-banner img {
+        max-width: 200px;
+    }
+
+    #paras-btns p {
+        margin: 40px;
+    }
+}
